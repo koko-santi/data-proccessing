@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width" />
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/forms.css" />
   <link rel="javascript" href="js/main.js" />
  </head>
  <body>
@@ -19,25 +20,25 @@
         </nav>
      </header>
    <main class="wrapper">
-        <form method="get" action="" >
+        <form method="get" action="" class="main-form">
           <div>
-            <lable for="FirstName">First Name</lable>: <br />
+            <label for="FirstName">First Name</label>: <br />
             <input type ="text" name ="FirstName" id="FirstName" placeholder="First Name" required="required" autofocus />
           </div>
           <div>
-            <lable for="LastName">Last Name</lable>: <br />
+            <label for="LastName">Last Name</label>: <br />
             <input type ="text" name ="LastName" id="LastName" placeholder="Last Name" required="required" />
           </div>
           <div>
-            <lable for="Email">Email</lable>: <br />
+            <label for="Email">Email</label>: <br />
             <input type ="email" name ="Email" id="Email" placeholder="Email" required="required" />
           </div>
           <div>
-            <lable for="Address">Address</lable>: <br />
+            <label for="Address">Address</label>: <br />
             <input type ="text" name ="Address" id="Address" placeholder="Address" required="required" />
           </div>
           <div>
-              <lable for="State">State</lable>: <br />
+              <label for="State">State</label>: <br />
               <select name="State" id="State" required="required">
                 <option value="">Please select a state</option>
                 <option value="AK">Alaska</option>
@@ -49,12 +50,26 @@
           <div>
             <fieldset>
               <legend>Would you like to join our mailing list?</legend>
-             <lable><input type="radio" name="JoinMailingList" value="Yes" /> Yes</lable><br />
-             <lable><input type="radio" name="JoinMailingList" value="No" /> No</lable>
+             <label><input type="radio" name="JoinMailingList" value="Yes" required="required" /> Yes</label><br />
+             <label><input type="radio" name="JoinMailingList" value="No" /> No</label>
+            </fieldset>
+
+          </div>
+          <div>
+            <fieldset>
+              <legend>Would you like to join our mailing list?</legend>
+             <label><input type="checkbox" name="InterestedIn" value="Website" /> Website</label><br />
+             <label><input type="checkbox" name="InterestedIn" value="OnlineCalendar" /> Online Calendar</label><br />
+             <label><input type="checkbox" name="InterestedIn" value="ContactForm" /> Contact Form</label><br />
+             <label><input type="checkbox" name="InterestedIn" value="Lollipops" /> Complimentary Lollipops</label>
             </fieldset>
           </div>
           <div>
-            <input type="submit" />
+            <label for="Comments">Comments:</label><br />
+            <textarea name="Comments" cols="36" rows="4" id="Comments"></textarea>
+          </div>
+          <div>
+            <input type="submit" value="submit it!"/>
           </div>
         </form>
      <footer>
