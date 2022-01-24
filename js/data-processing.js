@@ -31,11 +31,48 @@
             //replace underscore with space
             //https://stackoverflow.com/questions/542232/in-javascript-how-can-i-perform-a-global-replace-on-string-with-a-variable-insi
             key = key.split("_").join(" ");
-            myData += `<p>${key}: ${value}</p>`;
+
+      function toTitleCase(str) {
+        return str.replace(
+          /\w\S*/g,
+          function(txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
           }
-       
-      });
-  
+        );
+      }
+
+      function titleCase(value) {
+        value = value.toLowerCase().split(' ');
+        for (var i = 0; i < value.length; i++) {
+          value[i] = value[i].charAt(0).toUpperCase() + value[i].slice(1); 
+        }
+        return value.join(' ');
+      }
+
+      if (key== "First Name"){
+
+        value = titleCase(value);
+      }
+
+      if (key== "Last Name"){
+
+        value = titleCase(value);
+      }
+
+      if (key== "Adress"){
+
+        value = titleCase(value);
+      }
+
+      if (key== "City"){
+
+        value = titleCase(value);
+      }
+      
+      myData += `<p>${key}: ${value}</p>`;
+    }
+ 
+});
       myCart = `
         <p><b>Cart Contents</b></p>
         <p>${myCart}</p>
